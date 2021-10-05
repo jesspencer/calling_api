@@ -15,7 +15,7 @@ Pulled data from GitHub API using the python library requests.
 4. Start the code to produce the latest Bar Chart visualization from GitHub's API. The results will show as a html in your browser.
 
 ## RESULTS
-![alt text](https://github.com/jesspencer/calling_api/blob/master/python_repos.png?raw=true)
+![data_visual_picture](https://github.com/jesspencer/calling_api/blob/master/python_repos.png?raw=true)
 
 
 ## BUGS AND FEATURE REQUESTS
