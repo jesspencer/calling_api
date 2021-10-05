@@ -1,15 +1,15 @@
 # API CALLED
 Interactive Bar Chart where data is pulled from GitHub's API.
-Created Bar Chart html document using the python library Plotly.
-The Bar Graphic .html file created by running the code in the project can be sent within an email showing the interactive Bar Graph or displayed via your browser as and .html file.
-Data used for the graphic was from GitHub's public API.
-The main library used was python library requests.
+Running the code in the project, creates a .html file containing an interactive bar chart of the top most starred repositories on GitHub.
+Used python library 'plotly' and 'requests' for the data pull of top starred repos and presented the data with plotly graphics libary.
+The .html file results created by running the code in the initial project has been included 'python_repos.html' is an example file included.
+Using the instructions within 'RUNNING DOCUMENTATION LOCALLY' will produce a new .html file rewriting the one included.
 
 ## REQUIREMENTS
 - python 3.7
 - virtualenv
 - requests
-- plotly 
+- plotly
 
 ## RUNNING DOCUMENTATION LOCALLY:
 1. Create a VM; here are the steps [Creating_A_VM](https://github.com/jesspencer/Good-Grub/blob/master/Creating_A_VM.md)
