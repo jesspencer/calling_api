@@ -3,8 +3,10 @@
 import requests
 from plotly.graph_objs import Bar
 from plotly import offline
+import pandas as pd
 
-
+# Get today's date for data visual
+today  = pd.to_datetime('today').date()
 #Make an API call and store the response.
 url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
 headers = {'Accept': 'application/vnd.github.v3+json'}
@@ -16,7 +18,7 @@ response_dict = r.json()
 # print(f"Total respositories: {response_dict['total_count']}")
 # Explore information about the repositories
 repo_dicts = response_dict['items']
-# print(f"Respositories returned: {len(repo_dicts)}")
+# print(f"Respositories returned: {len(repo_dicts)}") #to check the count
 # repo_dict = repo_dicts[0] #placed here when i only wanted information from one repo
 repo_names, stars = [],[]
 for repo_dict in repo_dicts:
@@ -30,14 +32,14 @@ data = [{
 }]
 
 my_layout = {
-    'title':'Most-Starred Python Projects on GitHub',
-    'xaxis':{'title': 'Repository'},
+    'title':f"Most-Starred Python Projects on GitHub as of {today}",
+    'xaxis':{'title': 'Repository Name'},
     'yaxis':{'title': 'Stars'},
 }
 
 fig = {'data':data, 'layout': my_layout}
 offline.plot(fig, filename='python_repos.html')
-#Examine the first repository  returned from the printed responses
+#Examining the first repository  returned from the printed responses
 # print("\nSelected information about first respository:")
 # Getting information from more than just top repo
 # for repo_dict in repo_dicts:
